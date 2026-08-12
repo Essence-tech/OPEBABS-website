@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+}
+ p{
+    display: inline;
+ }
+button{
+    color: white;
+    background-color: #333333;
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#yellow1, #yellow2, #yellow3, #yellow4 {
+    background-color: rgb(254, 160, 10);
+}
+
+#clear{
+    font-size: 16px;
+}

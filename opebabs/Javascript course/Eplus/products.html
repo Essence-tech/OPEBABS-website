@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Tech Haven</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Tech Haven</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products...">
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Categories <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="#">Smartphones</a>
+                <a href="#">Laptops</a>
+                <a href="#">Tablets</a>
+                <a href="#">Accessories</a>
+                <a href="#">Smart Home</a>
+              </div>
+            </li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="products-section">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / <span>Products</span>
+        </div>
+
+        <div class="products-layout">
+          <!-- Filters Sidebar -->
+          <div class="filters-sidebar">
+            <div class="filters-header">
+              <h3>Filters</h3>
+              <button class="reset-btn" id="resetFilters">Reset</button>
+            </div>
+            
+            <div class="filter-group">
+              <h4>Brand</h4>
+              <div class="filter-options">
+                <div class="filter-option">
+                  <input type="checkbox" id="brand-apple" name="brand" value="Apple">
+                  <label for="brand-apple">Apple</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="brand-samsung" name="brand" value="Samsung">
+                  <label for="brand-samsung">Samsung</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="brand-sony" name="brand" value="Sony">
+                  <label for="brand-sony">Sony</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="brand-dell" name="brand" value="Dell">
+                  <label for="brand-dell">Dell</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="brand-amazon" name="brand" value="Amazon">
+                  <label for="brand-amazon">Amazon</label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <h4>Price Range</h4>
+              <div class="price-slider">
+                <div class="slider-container">
+                  <div class="slider" id="price-slider"></div>
+                </div>
+                <div class="price-inputs">
+                  <div class="price-value">$<span id="price-min">0</span></div>
+                  <div class="price-divider">-</div>
+                  <div class="price-value">$<span id="price-max">2000</span></div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="filter-group">
+              <h4>Rating</h4>
+              <div class="filter-options">
+                <div class="filter-option">
+                  <input type="checkbox" id="rating-4" name="rating" value="4">
+                  <label for="rating-4">4+ Stars</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="rating-3" name="rating" value="3">
+                  <label for="rating-3">3+ Stars</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="rating-2" name="rating" value="2">
+                  <label for="rating-2">2+ Stars</label>
+                </div>
+                <div class="filter-option">
+                  <input type="checkbox" id="rating-1" name="rating" value="1">
+                  <label for="rating-1">1+ Stars</label>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn apply-filters-btn" id="applyFilters">Apply Filters</button>
+          </div>
+          
+          <!-- Products Content -->
+          <div class="products-content">
+            <div class="products-header">
+              <div class="products-count">
+                <span id="productCount">24</span> Products
+              </div>
+              <div class="products-sort">
+                <label for="sort">Sort by:</label>
+                <select id="sort">
+                  <option value="newest">Newest</option>
+                  <option value="popular">Most Popular</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Top Rated</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="products-grid" id="productsGrid">
+              <!-- Products will be loaded by JavaScript -->
+            </div>
+            
+            <div class="pagination">
+              <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+              <div class="pagination-numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">10</a>
+              </div>
+              <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Tech Haven</h3>
+          <p>Your one-stop shop for all electronics needs. We offer the latest tech at competitive prices.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Smart Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tech Haven. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-filter-overlay" id="mobileFilterOverlay">
+    <div class="mobile-filter-container">
+      <div class="mobile-filter-header">
+        <h3>Filters</h3>
+        <button class="close-filter-btn" id="closeFilter"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="mobile-filter-content">
+        <!-- Mobile filters will be copied here by JavaScript -->
+      </div>
+      <div class="mobile-filter-footer">
+        <button class="btn secondary-btn" id="resetMobileFilters">Reset</button>
+        <button class="btn" id="applyMobileFilters">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+  
+  <button class="mobile-filter-btn" id="showFilters">
+    <i class="fas fa-filter"></i> Filters
+  </button>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

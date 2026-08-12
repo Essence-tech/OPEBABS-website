@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Community - Registration Page</title>
+    <link rel="stylesheet" href="demo_test.css">
+</head>
+<body>
+    <header>
+        <h1>Hello, Welcome to our community platform</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Login/Register</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <p id="init_p">Welcome to our community platform! Begin your registration here.</p>
+        <div class="output">
+          <form action="#" onchange="fill_form()" method="post">
+           <input type="text" id="username" required placeholder="Username" value="">
+           <br>
+           <br>
+            <input type="email" id="email" required placeholder="Email" value="">
+            <br>
+            <br>
+            <input type="password" id="password" required placeholder="Password" value="">
+            <br>
+            <br>
+            <input type="password" id="c_password" required placeholder="Confrim Password" value="">
+            <br>
+            <br>
+            <input type="text" id="exp_salary" required placeholder="Expected Salary" value="">
+            <br>
+            <br>
+            <input type="number" id="num_months" required placeholder="Number Of Months" value="">
+            <br>
+            <br>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+    </div>
+    
+    <hr>
+
+    <div class="container">
+        <p id="init_p">Test personal greeting with a get request</p>
+        <div class="output">
+          <form action="" method="get">
+            <input type="text" id="welcome" required placeholder="Welcome greeting">
+              <br>
+                <span class="error"></span>
+              <br>
+          </form>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="container">
+        <p id="init_p">Welcome to our community platform! Begin your registration here.</p>
+        <div class="output">
+         <h1> Form Data </h1>
+         <br>
+            Username: <span class="message" id="username_value"></span>
+          <br>
+          <br>
+            Email: <span class="message" id="email_value"></span>
+          <br>
+          <br>
+            Password <span class="message" id="password_value"></span>
+          <br>
+          <br>
+            Confirmation: <span class="message" id="confirmation_value"></span>
+          <br>
+          <br>
+            Welcome text: <span class="message" id="welcome_value"></span>
+          <br>
+          <br>
+            Expected Salary: <span class="message" id="exp_salary_value"></span>
+          <br>
+          <br>
+            Number Of Months: <span class="message" id="num_months_value"></span>
+          <br>
+          <br>
+            Total Salary: <span class="message" id="total_value"></span>
+          <br>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 - Our Community</p>
+    </footer>
+
+    <script>
+        function fill_form(){
+            //Collect Data from form
+            const username = document.getElementById("username").value
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+            const c_password = document.getElementById("c_password").value
+            const welcome = document.getElementById("welcome").value
+            const exp_salary = document.getElementById("exp_salary").value
+            const num_months = document.getElementById("num_months").value
+            const total = exp_salary * num_months
+            
+            //Display Data from form filled
+            document.getElementById("username_value").innerHTML = username;
+            document.getElementById("email_value").innerHTML = email;
+            document.getElementById("password_value").innerHTML = password;
+            document.getElementById("confirmation_value").innerHTML = c_password;
+            document.getElementById("welcome_value").innerHTML = welcome;
+            document.getElementById("exp_salary_value").innerHTML = '$'+ exp_salary;
+            document.getElementById("num_months_value").innerHTML = num_months;
+            document.getElementById("total_value").innerHTML = '$' + total;
+
+          }
+    </script>
+
+</body>
+
+</html>

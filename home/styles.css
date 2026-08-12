@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background-color: #ffffff;
+  padding: 8px 0;
+  /* width: 100%;
+  position: fixed; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 110px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #e2255b;
+  transform: none;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.logo span {
+  font-size: large;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #222;
+  transition: border 0.5s ease;
+}
+
+.logo img:hover {
+  border: 1px solid #2222224d;
+  transition: border 0.5s ease;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #535252;
+ padding: 8px 13px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: small;
+  background: white;
+   transition: background 0.3s ease-out;
+}
+
+.nav-links li a.active {
+  background-color: #e2255b;
+  padding: 8px 13px;
+  color: #fff;
+}
+
+.nav-links li a:hover:not(.active) {
+  background: #dac9ce;
+  padding: 8px 13px;
+  color:  #2e3070 ;
+  border-radius: 20px;
+  transition: background 0.3s ease-in;
+  
+}
+
+/* ===== CIRCLES ===== */
+/* .circle-1{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  border: 0 solid  #5458d8;
+  box-shadow: 0 0 20px #5458d8;
+} */
+
+/* ===== HERO ===== */
+.hero {
+  background-image: linear-gradient(to right,  rgba(43, 45, 107), rgba(59, 63, 158)), url("mum babs logo.png");
+  padding: 60px 40px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.hero-content {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 350px;
+}
+
+.hero-image {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-right: -40px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text-wrap {
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-badge img {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 0 solid  #5458d8;
+  box-shadow: 0 0 20px #5458d8;
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.hero-text {
+  color: #d8d9f5;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 7px;
+  letter-spacing: 2px;
+}
+
+.hero-desc {
+  color: #d8d9f5;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #e2255b, #b95ce0);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #2b2d6b;
+  text-decoration: none;
+  padding: 14px 60px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+/* ============================================
+   1. RESET
+   ============================================ */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* img {
+  display: block;
+  max-width: 100%;
+} */
+
+/* ============================================
+   2. VARIABLES
+   ============================================ */
+:root {
+  --color-title:      #c026a0;
+  --color-subtitle:   #555555;
+  --color-quote:      #222222;
+  --color-author:     #c026a0;
+  --color-btn-bg:     #c026a0;
+  --color-btn-text:   #ffffff;
+  --color-card-bg:    #ffffff;
+  --color-card-border:#e5e5e5;
+  --color-section-bg: #f9f9f9;
+  --color-img-placeholder: #d1d5db;
+
+  --font-base:        'Segoe UI', Arial, sans-serif;
+
+  --gap:              24px;
+  --card-radius:      12px;
+  --btn-size:         44px;
+  --section-padding:  80px 20px;
+  --container-max:    1200px;
+  --transition:       0.4s ease;
+}
+
+/* ============================================
+   3. GLOBAL STYLES
+   ============================================ */
+body {
+  font-family: var(--font-base);
+  background: var(--color-section-bg);
+  color: var(--color-quote);
+}
+
+/* ============================================
+   4. SECTION STYLES
+   ============================================ */
+
+/* --- Gallery Section --- */
+.gallery-section {
+  padding: var(--section-padding);
+  background: var(--color-section-bg);
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* --- Section Header --- */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-title);
+  margin-bottom: 14px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-subtitle);
+  max-width: 580px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+/* --- Gallery Wrapper (holds arrows + viewport) --- */
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+/* --- Viewport: clips overflow --- */
+.gallery-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* --- Track: slides horizontally --- */
+.gallery-track {
+  display: flex;
+  gap: var(--gap);
+  transition: transform var(--transition);
+  will-change: transform;
+}
+
+/* --- Individual Card --- */
+.gallery-card {
+  flex: 0 0 calc((100% - var(--gap) * 2) / 3);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image placeholder */
+.gallery-card img {
+  width: 100%;
+  /* aspect-ratio: 4 / 3; */
+  object-fit: cover;
+  background-color: var(--color-img-placeholder);
+  /* Shows a grey block when src is missing */
+  min-height: 220px;
+}
+
+/* Caption below image */
+.card-caption {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quote-text {
+  font-size: 0.95rem;
+  color: var(--color-quote);
+  line-height: 1.5;
+}
+
+.quote-author {
+  font-size: 0.88rem;
+  color: var(--color-author);
+  font-weight: 600;
+  text-align: right;
+}
+
+/* --- Arrow Buttons --- */
+.gallery-btn {
+  flex-shrink: 0;
+  width: var(--btn-size);
+  height: var(--btn-size);
+  border-radius: 50%;
+  border: none;
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.gallery-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.08);
+}
+
+.gallery-btn:active {
+  transform: scale(0.96);
+}
+
+/* ============================================
+   5. RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* --- Tablet: 2 cards visible --- */
+@media (max-width: 1023px) {
+  .gallery-card {
+    flex: 0 0 calc((100% - var(--gap)) / 2);
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .gallery-section {
+    padding: 60px 20px;
+  }
+}
+
+/* --- Mobile: 1 card visible --- */
+@media (max-width: 599px) {
+  .gallery-card {
+    flex: 0 0 100%;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 36px;
+  }
+
+  .gallery-section {
+    padding: 48px 16px;
+  }
+
+  .gallery-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+
+  .gallery-wrapper {
+    gap: 8px;
+  }
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+  }
+
+  .hero-image {
+    margin-right: 0;
+    margin-bottom: -60px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+

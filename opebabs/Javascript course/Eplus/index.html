@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> OTEC - Electronics Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>OTEC</h1>
+        </div>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for products...">
+          <button ><i class="fas fa-search"></i></button>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Categories</i></a>
+            </li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+            <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-slider">
+          <div class="slide active">
+            <div class="slide-content">
+              <h2>Sango Distribution Centre</h2>
+              <p> Located in the heart of the Sango-Ota, our Head Office at Km 1, Idiroko Road, Sango-Ota, Ogun State brings innovation closer to you.
+                  From premium appliances to cutting-edge gadgets, enjoy fast access, expert advice, and trusted service.</p>
+              <a href="#" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="img/hero_sango.jpeg" alt="Sango Office">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Iyana Distribution Centre</h2>
+              <p> Shop the same wide range of top-quality electronics. 
+                  From home appliances to smart gadgets with unbeatable service right in your neighborhood. 
+                  Visit our Iyana branch for a seamless in-store experience and fast local support.</p>
+              <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="img/hero_iyana.jpeg" alt="Iyana Office">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Bells Distribution Centre</h2>
+              <p> Get the latest in electronics and appliances without leaving your apartment. 
+                  Our branches offers the same great products, expert staff, and exclusive deals.
+                  Quality and convenience, redefined.</p>
+              <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="img/hero_bells.jpeg" alt="Bells Office">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Live Smarter!</h2>
+              <p> Discover a range of high-performance refrigerators, washers, ovens, and more. Designs that brings comfort, efficiency, and innovation to your everyday life. 
+                  Upgrade your home today with reliable tech that works as hard as you do.</p>
+              <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image">
+              <img src="img/cls2.jpeg" alt="Bells Office">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Comfort Meets Technology</h2>
+              <p>Blending modern design with tech-ready features, our Furniture brings style and function into perfect harmony.
+                 Explore smart desks, media furniture, ambient lighting, and more! All you need to create a connected home that looks as good as it performs.</p>
+              <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image-v">
+              <img src="img/cls3_1.jpeg" alt="Bells Office">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <h2>Cook Smarter, Faster, Better</h2>
+              <p>Upgrade your kitchen with the power and precision of modern electronic cookers. 
+                 Whether you're boiling, baking, or slow-cooking, our cookers combine smart features, safety, and energy efficiency to make every meal easier and faster.</p>
+              <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="slide-image-v">
+              <img src="img/cls4_1.jpeg" alt="Bells Office">
+            </div>
+          </div>
+          <button class="slider-btn prev" id="prev_slide"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn next" id="next_slide"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <div class="container">
+        <h2 class="section-title">Shop by Category</h2>
+        <div class="category-grid">
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-home"></i></div>
+            <h3>Smart Home</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-headphones"></i></div>
+            <h3>Audio Systems</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-icicles"></i></div>
+            <h3>Refridgerators </h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-spinner"></i></div>
+            <h3>Washing Machine</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-bowl-food"></i></div>
+            <h3>Micro-wave Oven</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-tv"></i></div>
+            <h3>TVs</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-fan"></i></div>
+            <h3>Air Conditioners</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-blender"></i></div>
+            <h3>Blenders</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Smartphones</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-desktop"></i></div>
+            <h3>Computers</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-print"></i></div>
+            <h3>Printers</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-tablet-alt"></i></div>
+            <h3>Gadgets &amp; Accessories</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Kitchen Utensils</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-chair"></i></div>
+            <h3>Furniture</h3>
+          </a>
+          <a href="#" class="category-card">
+            <div class="category-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3>Lightings</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+      <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products-grid" id="featuredProducts">
+          <!-- Products will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="best-sellers">
+      <div class="container">
+        <h2 class="section-title">Best Sellers</h2>
+        <div class="products-grid" id="bestSellers">
+          <!-- Products will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Stay Updated</h2>
+          <p>Subscribe to our newsletter for the latest products and exclusive offers</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>OTEC-NG</h3>
+          <p>Your comprehensive destination for cutting-edge electronics, offering the latest technology at highly competitive prices.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Smart Home</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Order History</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; OTEC Electronics. All Rights Reserved.</p>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
